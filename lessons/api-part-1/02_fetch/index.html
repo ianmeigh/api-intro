@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="content">
+
+  </div>
+  <script>
+    // fetch("https://ci-swapi.herokuapp.com/api/")
+    //   .then(response => response.text())
+    //   .then(data => {
+    //     document.getElementById('content').innerText = data;
+    //   })
+
+    fetch("https://ci-swapi.herokuapp.com/api/people/")
+      .then(response => response.json())
+      .then(data => {
+        Object.entries(data.results).forEach(elements => {
+          Object.entries(elements[1]).forEach(element => {
+            const [key, value] = element
+            document.getElementById('content').innerText += `${key}: ${value}\n`;
+          });
+          document.getElementById('content').innerText += `\n`;
+        });
+      });
+
+    // fetch("https://ci-swapi.herokuapp.com/api/")
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     Object.entries(data).forEach(element => {
+    //       const [key, value] = element
+
+    //       let container = document.createElement('div');
+    //       let name = document.createElement('h2');
+    //       name.innerText = key;
+
+    //       let url = document.createElement('a');
+    //       url.href = value;
+    //       url.innerHTML = value;
+
+    //       container.appendChild(name);
+    //       container.appendChild(url);
+    //       document.getElementById('content').appendChild(container);
+    //     });
+    //   });
+  </script>
+</body>
+
+</html>
