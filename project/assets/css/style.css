@@ -4,18 +4,21 @@
   font-weight: normal;
   src: url("../fonts/Menlo-Regular.woff") format("woff");
 }
+
 @font-face {
   font-family: "Menlo";
   font-style: normal;
   font-weight: bold;
   src: url("../fonts/Menlo-Bold.woff") format("woff");
 }
+
 @font-face {
   font-family: "Menlo";
   font-style: italic;
   font-weight: normal;
   src: url("../fonts/Menlo-Italic.woff") format("woff");
 }
+
 @font-face {
   font-family: "Menlo";
   font-style: italic;
@@ -35,16 +38,15 @@
 }
 
 body {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
-textarea  
-{  
-   font-family: "Menlo", 'Courier New', Courier, monospace;
-   height: 25vh;
+textarea {
+  font-family: "Menlo", 'Courier New', Courier, monospace;
+  height: 25vh;
 }
 
 .modal-body {
-    max-height: 60vh;
-    overflow-y: scroll;
+  max-height: 60vh;
+  overflow-y: scroll;
 }
